@@ -1,0 +1,18 @@
+[
+  {
+    "outputFileName": "wwwroot/js/scripts.js",
+    "inputFiles": [
+      "wwwroot/js/jquery.js",
+      "wwwroot/js/custom.js",
+      "wwwroot/js/plugins.js",
+      "wwwroot/js/plugins2.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/bundle.css",
+    "inputFiles": [
+      "wwwroot/css/plugins.css",
+      "wwwroot/css/style.css"
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model BlockBaster.Areas.Admin.Models.ListMoviesModel
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>Администрирование</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">Home</a></li>
+						<li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="topbar-filter fw">
+					<p>@*Found*@ <span>@*1,608 movies*@</span> @*in total*@</p>
+					<label>Sort by:</label>
+					<select>
+						<option value="popularity">Popularity Descending</option>
+						<option value="popularity">Popularity Ascending</option>
+						<option value="rating">Rating Descending</option>
+						<option value="rating">Rating Ascending</option>
+						<option value="date">Release date Descending</option>
+						<option value="date">Release date Ascending</option>
+					</select>
+					<a href="movielist.html" class="list"><i class="ion-ios-list-outline "></i></a>
+					<a  href="moviegridfw.html" class="grid"><i class="ion-grid active"></i></a>
+				</div>
+				<div class="flex-wrap-movielist mv-grid-fw">
+					@if (Model.movies.Count() > 0)
+					{
+						@foreach (var obj in Model.movies)
+						{
+							<div class="movie-item-style-2 movie-item-style-1">
+							<img src="~/images/uploads/mv1.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a asp-area="Admin" asp-controller="Movies" asp-action="SingleMovie" asp-route-id=@obj.Id>Изменить  <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="SingleMovie" asp-route-id=@obj.Id>@obj.Name</a></h6>
+							</div>
+						</div>		
+						}
+
+					}
+						
+				</div>		
+				
+			</div>
+		</div>
+	</div>
+</div>

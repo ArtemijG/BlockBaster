@@ -1,0 +1,195 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlockBaster
+build_property.RootNamespace = BlockBaster
+build_property.ProjectDir = F:\Users\max\source\repos\BlockBaster\BlockBaster\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\Users\max\source\repos\BlockBaster\BlockBaster
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/AddActor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXEFkZEFjdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/AddCountry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXEFkZENvdW50cnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/AddGenre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXEFkZEdlbnJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/AddProducer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXEFkZFByb2R1Y2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/AddScriptwriters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXEFkZFNjcmlwdHdyaXRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/ListActors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXExpc3RBY3RvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/ListCountries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXExpc3RDb3VudHJpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/ListGenres.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXExpc3RHZW5yZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/ListMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXExpc3RNb3ZpZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/ListProducers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXExpc3RQcm9kdWNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/ListScriptwriters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXExpc3RTY3JpcHR3cml0ZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Movies/SingleMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVzXFNpbmdsZU1vdmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Producers/ListProducers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjZXJzXExpc3RQcm9kdWNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Shared/HeaderAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEhlYWRlckFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/User/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/User/Views/Home/ViewMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFZpZXdNb3ZpZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/User/Views/Shared/HeaderUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTaGFyZWRcSGVhZGVyVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/User/Views/Shared/_LayoutUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTaGFyZWRcX0xheW91dFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/User/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Areas/User/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Home/ListMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0TW92aWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Home/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/CssPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENzc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvb3RlclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/GoogleFontsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdvb2dsZUZvbnRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/HeaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhlYWRlclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/MetaTagsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1ldGFUYWdzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/MobileSpecificMetaPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1vYmlsZVNwZWNpZmljTWV0YVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/PreloaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByZWxvYWRlclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/ScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/SignUpPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNpZ25VcFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Users/max/source/repos/BlockBaster/BlockBaster/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

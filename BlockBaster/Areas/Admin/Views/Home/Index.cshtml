@@ -1,0 +1,156 @@
+﻿@*
+<div>
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+            <input type="submit" value="Выйти" />
+        </form>
+    </div>*@
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>Администрирование</h1>
+					<a  asp-area="" asp-controller="Account" asp-action="Logout">Выйти</a>
+					<ul class="breadcumb">
+						@*<li class="active"><a href="#">Home</a></li>
+						<li> <span class="ion-ios-arrow-right"></span> movie listing</li>*@
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="topbar-filter fw">
+					<p>@*Found*@ <span>@*1,608 movies*@</span> @*in total*@</p>
+					<label>Sort by:</label>
+					<select>
+						<option value="popularity">Popularity Descending</option>
+						<option value="popularity">Popularity Ascending</option>
+						<option value="rating">Rating Descending</option>
+						<option value="rating">Rating Ascending</option>
+						<option value="date">Release date Descending</option>
+						<option value="date">Release date Ascending</option>
+					</select>
+					<a href="movielist.html" class="list"><i class="ion-ios-list-outline "></i></a>
+					<a  href="moviegridfw.html" class="grid"><i class="ion-grid active"></i></a>
+				</div>
+				<div class="flex-wrap-movielist mv-grid-fw">
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv1.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a  href="moviesingle.html"> Добавить  <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a >Добавить фильм</a></h6>
+							</div>
+						</div>					
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv2.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="AddActor"> Добавить актера <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="AddActor">Добавить актера</a></h6>
+							</div>
+						</div>					
+						<div class="movie-item-style-2 movie-item-style-1">
+	            			<img src="images/uploads/mv-item3.jpg" alt="">
+	            			<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="AddCountry"> Далее <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+	            			<div class="mv-item-infor">
+	            				<h6><a asp-area="Admin" asp-controller="Movies" asp-action="AddCountry">Добавить страну</a></h6>
+	            			</div>
+	            		</div>					
+						<div class="movie-item-style-2 movie-item-style-1">
+	            			<img src="images/uploads/mv-item4.jpg" alt="">
+	            			<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="AddGenre"> Добавить <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+	            			<div class="mv-item-infor">
+	            				<h6><a asp-area="Admin" asp-controller="Movies" asp-action="AddGenre">Добавить жанр</a></h6>
+	            			</div>
+	            		</div>
+	            		<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv3.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a     asp-area="Admin" asp-controller="Movies" asp-action="AddProducer"> Добавить <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="AddProducer">Добавить режиссера  </a></h6>
+							</div>
+						</div>
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv4.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="AddScriptwriters"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="AddScriptwriters">Добавить сценариста</a></h6>
+							</div>
+						</div>
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv1.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a  href="moviesingle.html"> Изменить  <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="ListMovie">Изменить фильм</a></h6>
+							</div>
+						</div>					
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv2.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a asp-area="Admin" asp-controller="Movies" asp-action="ListActors"> Изменить <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="ListActors">Изменить актера</a></h6>
+							</div>
+						</div>					
+						<div class="movie-item-style-2 movie-item-style-1">
+	            			<img src="images/uploads/mv-item3.jpg" alt="">
+	            			<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="ListCountries> Изменить <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+	            			<div class="mv-item-infor">
+	            				<h6><a asp-area="Admin" asp-controller="Movies" asp-action="ListCountries">Изменить страну</a></h6>
+	            			</div>
+	            		</div>					
+						<div class="movie-item-style-2 movie-item-style-1">
+	            			<img src="images/uploads/mv-item4.jpg" alt="">
+	            			<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="ListGenres"> Изменить <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+	            			<div class="mv-item-infor">
+	            				<h6><a asp-area="Admin" asp-controller="Movies" asp-action="ListGenres">Изменить жанр</a></h6>
+	            			</div>
+	            		</div>
+	            		<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv3.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="ListProducers"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="ListProducers">Изменить режиссера  </a></h6>
+							</div>
+						</div>
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="images/uploads/mv4.jpg" alt="">
+							<div class="hvr-inner">
+	            				<a  asp-area="Admin" asp-controller="Movies" asp-action="ListScriptwriters"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a asp-area="Admin" asp-controller="Movies" asp-action="ListScriptwriters">Изменить сценариста</a></h6>
+							</div>
+						</div>
+						
+				</div>		
+				
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+﻿@model LoginViewModel
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>sign up</h3>
+        <form asp-area ="" asp-controller="Account" asp-action="Register" asp-validation="Register" method="post" asp-route-returnUrl ="@ViewBag.returnUrl">
+            <div class="row" asp-validation-summary="All">
+                 <label asp-for="UserName_SignUp" for="username-2">
+                    Логин:
+                    <input asp-for="UserName_SignUp" type="text" name="username" id="username-2" placeholder="Hugh Jackman"  required="required" />
+                    <span asp-validation-for="UserName"></span>
+                </label>
+            </div>
+           
+            <div class="row">
+                <label asp-for="Email" for="email-2">
+                    Почта:
+                    <input asp-for="Email" name="email" id="email-2" placeholder=""  required="required" />
+                    <span asp-validation-for="Email"></span>
+                </label>
+            </div>
+             <div class="row">
+                <label asp-for="Password_SignUp" for="password-2">
+                    Пароль:
+                    <input asp-for="Password_SignUp" type="password" name="password" id="password-2" placeholder=""  required="required" />
+                    <span asp-validation-for="Password_SignUp"></span>
+                </label>
+            </div>
+             <div class="row">
+                <label asp-for="Password_SignUp2" for="repassword-2">
+                    Повторить пароль:
+                    <input asp-for="Password_SignUp2" type="password" name="password" id="repassword-2" placeholder=""  required="required" />
+                    <span asp-validation-for="Password_SignUp2"></span>
+                </label>
+            </div>
+           <div class="row">
+             <button type="submit">Зарегистрироваться</button>
+           </div>
+        </form>
+    </div>
+</div>

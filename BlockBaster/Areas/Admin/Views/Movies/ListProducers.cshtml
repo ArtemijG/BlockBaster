@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model BlockBaster.Areas.Admin.Models.ProducerViewModel
+
+
+
+<div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				 <h1> movie listing - list</h1>
+				<ul class="breadcumb">
+					<li class="active"><a href="#">Home</a></li>
+					<li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+				</ul> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				@if (Model.producers.Count() > 0)
+							{
+								foreach (var obj in Model.producers)
+								{
+				<div class="row">
+					<div class="col-md-12">
+						<div class="ceb-item-style-2">
+							
+									<img height=70 width=70 src="~/images/Producers/@obj.Path" alt="">
+									<div class="ceb-infor">
+										<h2><label><a asp-area="Admin" asp-controller="Movies" asp-action="AddProducer" asp-route-Id="@obj.Id">@obj.Name</a></label></h2>
+										
+										<p> @obj.Date</p>
+									
+									</div>
+							
+						</div>
+					</div>
+			</div>
+				}
+							}
+		</div>
+	</div>
+</div>
+</div>

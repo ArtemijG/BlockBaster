@@ -1,0 +1,45 @@
+﻿@model LoginViewModel
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>Войти</h3>
+        <form asp-area ="" asp-controller="Account"  asp-validation="Login" method="post" asp-route-returnUrl ="@ViewBag.returnUrl">
+        	<div class="row" asp-validation-summary="All">
+        		 <label asp-for="UserName">
+                    Логин:
+                    <input asp-for="UserName" type="text" name="username" id="username" placeholder="Hugh Jackman"  required="required" />
+                    <span asp-validation-for="UserName"></span>
+                </label>
+        	</div>
+           
+            <div class="row">
+            	<label asp-for="Password">
+                    Пароль:
+                    <input asp-for="Password" type="password" name="password" id="password" placeholder="******"  required="required" />
+                <span asp-validation-for="Password"></span>
+                </label>
+            </div>
+            <div class="row">
+            	<div class="remember">
+					<div>
+                        <label asp-for="RememberMe"></label>
+						<input asp-for="RememberMe" type="checkbox" name="remember" value="Remember me"><span>Запомнить</span>
+                        <span asp-validation-for="RememberMe"></span>
+					</div>
+            		@*<a href="#">Забыли пароль ?</a>*@
+            	</div>
+            </div>
+           <div class="row">
+           	 <button type="submit">Войти</button>
+           </div>
+        </form>
+        @*<div class="row">
+        	<p>Or via social</p>
+            <div class="social-btn-2">
+            	<a class="fb" href="#"><i class="ion-social-facebook"></i>Facebook</a>
+            	<a class="tw" href="#"><i class="ion-social-twitter"></i>twitter</a>
+            </div>
+        </div>*@
+    </div>
+</div>
+

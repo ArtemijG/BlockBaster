@@ -1,0 +1,40 @@
+﻿@model BlockBaster.Data.Entities.Genre
+@{
+    ViewData["Title"] = "AddGenre";
+}
+<form asp-area="Admin" asp-controller="Movies" asp-action="AddGenre">
+    <div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				 <h1> movie listing - list</h1>
+				<ul class="breadcumb">
+					<li class="active"><a href="#">Администрирование</a></li>
+					<li> <span class="ion-ios-arrow-right"></span> Добавить жанр</li>
+				</ul> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<p><h2>Жанр</h2></p>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="ceb-item-style-2">
+							<div class="ceb-infor">
+								
+								<input type="text" asp-for="Name"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="submit" value="Принять" class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+</div>
+
+</form>

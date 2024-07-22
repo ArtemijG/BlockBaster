@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model BlockBaster.Data.Entities.Country
+
+<form asp-area="Admin" asp-controller="Movies" asp-action="AddCountry">
+    <div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				 <h1> movie listing - list</h1>
+				<ul class="breadcumb">
+					<li class="active"><a href="#">Home</a></li>
+					<li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+				</ul> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<p><h2>Режиссер</h2></p>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="ceb-item-style-2">
+							<div class="ceb-infor">
+								<h2>Страна</h2>
+								<input type="text" asp-for="Name"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="submit" value="Принять" class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+</div>
+
+</form>

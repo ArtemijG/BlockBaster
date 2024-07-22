@@ -1,0 +1,258 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Users\\max\\source\\repos\\BlockBaster\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\views\\shared\\signuppartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\views\\shared\\signuppartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\user\\views\\shared\\headeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\user\\views\\shared\\headeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\admin\\views\\shared\\headeradmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\admin\\views\\shared\\headeradmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\user\\views\\home\\viewmovie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\user\\views\\home\\viewmovie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\admin\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\admin\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\views\\shared\\loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\views\\shared\\loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\admin\\views\\movies\\addgenre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\admin\\views\\movies\\addgenre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\admin\\views\\movies\\addactor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\admin\\views\\movies\\addactor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\models\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\models\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\admin\\views\\movies\\singlemovie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\admin\\views\\movies\\singlemovie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|f:\\users\\max\\source\\repos\\blockbaster\\blockbaster\\areas\\admin\\models\\singlemoviemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD176CB5-5141-4E84-B9B3-BEA6EBA62562}|BlockBaster\\BlockBaster.csproj|solutionrelative:blockbaster\\areas\\admin\\models\\singlemoviemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SignUpPartial.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Shared\\SignUpPartial.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Views\\Shared\\SignUpPartial.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Shared\\SignUpPartial.cshtml",
+              "RelativeToolTip": "BlockBaster\\Views\\Shared\\SignUpPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginPartial.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Shared\\LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Views\\Shared\\LoginPartial.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Shared\\LoginPartial.cshtml",
+              "RelativeToolTip": "BlockBaster\\Views\\Shared\\LoginPartial.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAgwC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViewMovie.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\User\\Views\\Home\\ViewMovie.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\User\\Views\\Home\\ViewMovie.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\User\\Views\\Home\\ViewMovie.cshtml",
+              "RelativeToolTip": "BlockBaster\\Areas\\User\\Views\\Home\\ViewMovie.cshtml",
+              "ViewState": "AQIAAL0AAAAAAAAAAAAgwOcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HeaderAdmin.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Shared\\HeaderAdmin.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\Admin\\Views\\Shared\\HeaderAdmin.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Shared\\HeaderAdmin.cshtml",
+              "RelativeToolTip": "BlockBaster\\Areas\\Admin\\Views\\Shared\\HeaderAdmin.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAIAwwCUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Views\\Account\\Login.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "BlockBaster\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\Admin\\Controllers\\MoviesController.cs",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "BlockBaster\\Areas\\Admin\\Controllers\\MoviesController.cs",
+              "ViewState": "AQIAAIMBAAAAAAAAAAAcwKcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T18:57:12.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HeaderUser.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\User\\Views\\Shared\\HeaderUser.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\User\\Views\\Shared\\HeaderUser.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\User\\Views\\Shared\\HeaderUser.cshtml",
+              "RelativeToolTip": "BlockBaster\\Areas\\User\\Views\\Shared\\HeaderUser.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAIAwwBgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddActor.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Movies\\AddActor.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\Admin\\Views\\Movies\\AddActor.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Movies\\AddActor.cshtml",
+              "RelativeToolTip": "BlockBaster\\Areas\\Admin\\Views\\Movies\\AddActor.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddGenre.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Movies\\AddGenre.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\Admin\\Views\\Movies\\AddGenre.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Movies\\AddGenre.cshtml",
+              "RelativeToolTip": "BlockBaster\\Areas\\Admin\\Views\\Movies\\AddGenre.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BlockBaster\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAGEAAAAAAAAAAGBnwH8AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Views\\Account\\Register.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "BlockBaster\\Views\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Register.cs",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Models\\Register.cs",
+              "RelativeDocumentMoniker": "BlockBaster\\Models\\Register.cs",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Models\\Register.cs",
+              "RelativeToolTip": "BlockBaster\\Models\\Register.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T18:57:12.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SingleMovieModel.cs",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Models\\SingleMovieModel.cs",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\Admin\\Models\\SingleMovieModel.cs",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Models\\SingleMovieModel.cs",
+              "RelativeToolTip": "BlockBaster\\Areas\\Admin\\Models\\SingleMovieModel.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T18:57:12.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SingleMovie.cshtml",
+              "DocumentMoniker": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Movies\\SingleMovie.cshtml",
+              "RelativeDocumentMoniker": "BlockBaster\\Areas\\Admin\\Views\\Movies\\SingleMovie.cshtml",
+              "ToolTip": "F:\\Users\\max\\source\\repos\\BlockBaster\\BlockBaster\\Areas\\Admin\\Views\\Movies\\SingleMovie.cshtml",
+              "RelativeToolTip": "BlockBaster\\Areas\\Admin\\Views\\Movies\\SingleMovie.cshtml",
+              "ViewState": "AQIAAOwAAAAAAAAAAKBrwBMBAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-01T18:57:12.25Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

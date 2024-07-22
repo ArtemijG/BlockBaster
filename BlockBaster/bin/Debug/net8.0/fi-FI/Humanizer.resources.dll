@@ -1,0 +1,311 @@
+Module.cachedFetch = function () {
+  var UnityCache = Module.UnityCache;
+  var RequestStore = UnityCache.RequestStore;
+  var fetchWithProgress = Module.fetchWithProgress;
+
+  function log(message) {
+    console.log("[UnityCache] " + message);
+  }
+
+  function resolveURL(url) {
+    resolveURL.link = resolveURL.link || document.createElement("a");
+    resolveURL.link.href = url;
+    return resolveURL.link.href;
+  }
+
+  function isCrossOriginURL(url) {
+    var originMatch = window.location.href.match(/^[a-z]+:\/\/[^\/]+/);
+    return !originMatch || url.lastIndexOf(originMatch[0], 0);
+  }
+
+  /**
+   * A response restored from the unity cache.
+   * Implements the same interface as a fetch API Response
+   */
+  function CachedResponse(options) {
+    options = options || {};
+    this.headers = new Headers();
+    Object.keys(options.headers).forEach(function (key) {
+      this.headers.set(key, options.headers[key]);
+    }.bind(this));
+    this.redirected = options.redirected;
+    this.status = options.status;
+    this.statusText = options.statusText;
+    this.type = options.type;
+    this.url = options.url;
+    this.parsedBody = options.parsedBody;
+
+    Object.defineProperty(this, "ok", {
+      get: function () {
+        return this.status >= 200 && this.status <= 299;
+      }.bind(this)
+    });
+  }
+
+  /**
+   * Takes a Response stream and reads it to completion. It returns a promise that resolves with an ArrayBuffer.
+   * @returns {Promise<ArrayBuffer>}
+   */
+  CachedResponse.prototype.arrayBuffer = function () {
+    return Promise.resolve(this.parsedBody.buffer);
+  }
+
+  /**
+   * Takes a Response stream and reads it to completion. It returns a promise that resolves with a Blob.
+   * @returns {Promise<Blob>}
+   */
+  CachedResponse.prototype.blob = function () {
+    return this.arrayBuffer().then(function (buffer) {
+      return new Blob([buffer]);
+    });
+  }
+  
+  // TODO: Implement Body.formData()
+  // Takes a Response stream and reads it to completion. It returns a promise that resolves with a FormData object.
+  
+  /**
+   * Takes a Response stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON, which is a JavaScript value of datatype object, string, etc.
+   * @returns {Promise<Object>}
+   */
+  CachedResponse.prototype.json = function () {
+    return this.text().then(function (text) {
+      return JSON.parse(text);
+    });
+  }
+  
+  /**
+   * Takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString (text).
+   * @returns {Promise<string>}
+   */
+  CachedResponse.prototype.text = function () {
+    var utf8decoder = new TextDecoder();
+
+    return Promise.resolve(utf8decoder.decode(this.parsedBody));
+  }
+
+  function createCacheEntry(url, company, product, timestamp, response) {
+    var cacheEntry = {
+      url: url,
+      version: RequestStore.version,
+      company: company,
+      product: product, 
+      updated: timestamp,
+      revalidated: timestamp,
+      accessed: timestamp,
+      response: {
+        headers: {}
+      }
+    };
+
+    if (response) {
+      response.headers.forEach(function (value, key) {
+        cacheEntry.response.headers[key] = value; 
+      });
+      ["redirected", "status", "statusText", "type", "url"].forEach(function (property) { cacheEntry.response[property] = response[property]; });
+      cacheEntry.response.parsedBody = response.parsedBody;
+    }
+    return cacheEntry;
+  }
+
+  function isCacheEnabled(url, init) {
+    if (init && init.method && init.method !== "GET") {
+      return false;
+    }
+
+    if (init && ["must-revalidate", "immutable"].indexOf(init.control) == -1) {
+      return false;
+    }
+
+    if (!url.match("^https?:\/\/")) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function cachedFetch(resource, init) {
+    var unityCache = UnityCache.getInstance();
+    var url = resolveURL((typeof resource === "string") ? resource : resource.url);
+    var cache = { enabled: isCacheEnabled(url, init) };
+    if (init) {
+      cache.control = init.control;
+      cache.company = init.company;
+      cache.product = init.product;
+    }
+    cache.result = createCacheEntry(url, cache.company, cache.product, Date.now());
+    cache.revalidated = false;
+
+    function fetchAndStoreInCache(resource, init) {
+      return fetchWithProgress(resource, init).then(function (response) {
+        if (!cache.enabled || cache.revalidated) {
+          return response;
+        }
+
+        if (response.status === 304) {
+          // Cached response is still valid. Set revalidated flag and return cached response
+          cache.result.revalidated = cache.result.accessed;
+          cache.revalidated = true;
+
+          unityCache.storeRequest(cache.result).then(function () {
+            log("'" + cache.result.url + "' successfully revalidated and served from the indexedDB cache");
+          }).catch(function (error) {
+            log("'" + cache.result.url + "' successfully revalidated but not stored in the indexedDB cache due to the error: " + error);
+          });
+
+          return new CachedResponse(cache.result.response);
+        } else if (response.status == 200) {
+          // New response -> Store it and cache and return it
+          cache.result = createCacheEntry(
+            response.url,
+            cache.company,
+            cache.product,
+            cache.accessed,
+            response
+          );
+          cache.revalidated = true;
+
+          unityCache.storeRequest(cache.result).then(function () {
+            log("'" + cache.result.url + "' successfully downloaded and stored in the indexedDB cache");
+          }).catch(function (error) {
+            log("'" + cache.result.url + "' successfully downloaded but not stored in the indexedDB cache due to the error: " + error);
+          });
+        } else {
+          // Request failed
+          log("'" + cache.result.url + "' request failed with status: " + response.status + " " + response.statusText);
+        }
+
+        return response;
+      });
+    }
+
+    function sendProgressEvents(response) {
+      if (init && init.onProgress) {
+        init.onProgress({
+          type: "progress",
+          total: response.parsedBody.length,
+          loaded: response.parsedBody.length,
+          lengthComputable: true
+        });
+        init.onProgress({
+          type: "load",
+          total: response.parsedBody.length,
+          loaded: response.parsedBody.length,
+          lengthComputable: true
+        });
+      }
+    }
+
+    // Use fetch directly if request can't be cached
+    if (!cache.enabled) {
+      return fetchWithProgress(resource, init);
+    }
+
+    return unityCache.loadRequest(cache.result.url).then(function (result) {
+      // Fetch resource and store it in cache if not present or cache is outdated
+      if (!result || result.version !== RequestStore.version) {
+        return fetchAndStoreInCache(resource, init);
+      }
+
+      cache.result = result;
+      cache.result.accessed = Date.now();
+      var response = new CachedResponse(cache.result.response);
+      
+      if (cache.control == "immutable") {
+        cache.revalidated = true;
+        unityCache.storeRequest(cache.result);
+        log("'" + cache.result.url + "' served from the indexedDB cache without revalidation");
+        sendProgressEvents(response);
+
+        return response;
+      } else if (isCrossOriginURL(cache.result.url) && (response.headers.get("Last-Modified") || response.headers.get("ETag"))) {
+        return fetch(cache.result.url, { method: "HEAD" }).then(function (headResult) {
+          cache.revalidated = ["Last-Modified", "ETag"].every(function (header) {
+            return !response.headers.get(header) || response.headers.get(header) == headResult.headers.get(header);
+          });
+          if (cache.revalidated) {
+            cache.result.revalidated = cache.result.accessed;
+            unityCache.storeRequest(cache.result);
+            log("'" + cache.result.url + "' successfully revalidated and served from the indexedDB cache");
+            sendProgressEvents(response);
+            
+            return response;
+          } else {
+            return fetchAndStoreInCache(resource, init);
+          }
+        });
+      } else {
+        init = init || {};
+        var requestHeaders = init.headers || {};
+        init.headers = requestHeaders;
+        if (response.headers.get("Last-Modified")) {
+          requestHeaders["If-Modified-Since"] = response.headers.get("Last-Modified");
+          requestHeaders["Cache-Control"] = "no-cache";
+        } else if (response.headers.get("ETag")) {
+          requestHeaders["If-None-Match"] = response.headers.get("ETag");
+          requestHeaders["Cache-Control"] = "no-cache";
+        }
+
+        return fetchAndStoreInCache(resource, init);
+      }
+    }).catch(function (error) {
+      // Fallback to regular fetch if and IndexDB error occurs
+      log("Failed to load '" + cache.result.url + "' from indexedDB cache due to the error: " + error);
+      return fetchWithProgress(resource, init);
+    });
+  }
+
+  return cachedFetch;
+}();                                                                                                                                             ¹z	  ^      ä ‚x         Ê      	  â  ¹z   €  
+   ä ¹z
+  _      â z ÿ g  pRò â ¥r	     ä ¤r
+   ? È r   ?àÿ Ò ÿ    	 ( y      !   ( y      %   " $vÿ X  ÿ  ä $v	ÿ X  ÿ  â Usÿ         â $x€    Ä $vÿ a  ÿ  â 
+	 `  ÿàù â $rÿÿ   ÿ  â Ey  `    € â $vÿ Y  ÿ  ä $ÿ Y  ÿ â z   `  ÿè ÈO Š  b    € â$     ä $x    ÿ  Ê r  ÿ   pRô ä 
+ `  ÿàÿ ä 
+ b    € â $‚ÿÿ     â    ÿà÷ Æ $   
+ ä $ÿÿ    ä $    âG)  `    € î $vÿ c  ÿ  â ¹z  Z   
+   ä †y ÿ  	 ê †y ÿ   	 è yÿ   	 ¢ z ÿ f  pRğ â $vÿ d  ÿ  Ğ †y ÿ  	 è †y ÿ  	 âA G‰  À    € ê yÿôÿÿ 	 ¨ yÿÜÿÿ  b r ÿ   pRğ ÚO G‰  p    € ê y
+ÿèÿÿ 	 ¢ $tÿ   ÿ  â s
+ 
+       $N s        & +t
+  ğ?    +r        +r        +t
+  ğ¿     +r       #rÿ       Ê x UU  Bğ Ú G	        € ê x       Ğ Dy   	    À âyÿğÿÿ 	 ¢ $x   ÿ  Ì s
+        $ )r
+    
+    "s        *N +r
+   
+     *r 
+ÿ    àğ  r
+ÿ        ä rÿ        Ğ †y ÿÜÿÿ äAy        € ê z   b  p`ğ È r     pdp  Ú M	        € ê r 	   ÿàñ Ê $rÿÿ     Ğ s	       ¢ x    ÿàÿ âUsÿ         â x    ÿàÿ â Ey  ğ    € â r    p`ğ äz  Z  àµ ä r    p`ü ä x    ÿàÿ Ä zÿ [  d~ ä r    p`ô äx    ÿàÿ ä xÿ@        ä r    p`ü ä x
+    ÿàÿ Ä xÿ@        ä r ÿ   pRü ä r 
+   p`ò ä x
+    ÿàÿ äx    ÿàÿ äx    ÿàÿ Ä r 
+   p`ö är    p`ø är    p`ú ä x 	   ÿàÿ äx
+ 
+   ÿàÿ äx    ÿàÿ Ä x    ÿàÿ äx    ÿàÿ äx    ÿàÿ äx     ÿàÿ â †s 	      âA Gi        € ì s	      ¨ †s 	     äA Ay        € ê r    p`ü â Usÿ         â Ey  P     € ä xÿ@        â G	        € ğ s	      ¨ †s 	     äA Ay        € ê Usÿ         â Ey  P     € â r 
+   p`ğ â G        € Ø s	      ¨ †s 	     äA Ay        € ê Usÿ         â Ey  P     € â r    p`ò â G)        € Ø s	      ¨ †s 	     äA Ay        € ê Usÿ         â Ey  P     € â r    p`ô â G9        € Ø s	      ¨ †s 	     äA Ay        € ê Usÿ         â Ey  P     € â r    p`ö â GI        € Ø s	      ¨ †s 	     äA Ay        € ê Usÿ         â Ey  P     € â r    p`ø â GY        € Ø s	      ¨ †s 	     äA Ay        € ê r ÿ   pRü â Usÿ         â Ey  P     € â r     p`ú Ô Gi        € ê s      ¨ †s      äC Ay        € ê r ÿ   pRü â Usÿ         â Ey  @     € ö Gi        € ê s 	     ¨. †s 	     äC Ay        € ê Usÿ         â Ey  @     € â G	        € ê s 
+     ¨. †s 
+     äC Ay        € ê Usÿ         â Ey  @     € â G        € ê s      ¨. †s      äC Ay        € ê Usÿ         â Ey  @     € â G)        € ê s      ¨. †s      äC Ay        € ê Usÿ         â (The MIT License)
+
+Copyright (c) 2012 Nathan Rajlich <nathan@tootallnate.net>
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

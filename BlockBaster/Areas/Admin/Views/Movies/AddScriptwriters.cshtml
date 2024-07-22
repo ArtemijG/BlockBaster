@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*@model BlockBaster.Areas.Admin.Models.ScriptwriterViewModel*@
+@model BlockBaster.Data.Entities.Scriptwriter
+
+
+<form asp-area="Admin" asp-controller="Movies" asp-action="AddScriptwriters" method="post" enctype="multipart/form-data">
+<div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				 <h1> movie listing - list</h1>
+				<ul class="breadcumb">
+					<li class="active"><a href="#">Home</a></li>
+					<li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+				</ul> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<p><h2>Сценарист</h2></p>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="ceb-item-style-2">
+							<div class="ceb-infor">
+								<h2><input type="text" asp-for="Name"/></h2>
+								<input type="date" asp-for="Date"/>
+								<input name="imageFile" id="imageFile" type="file" class="form-control" accept=".jpg" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="submit" value="Принять" class="btn btn-primary" />
+			</div>
+		</div>
+	</div>
+</div>
+</form>
